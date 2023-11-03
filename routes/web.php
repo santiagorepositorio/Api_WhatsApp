@@ -25,6 +25,8 @@ Route::get('/', function () {
     ]);
 });
 Route::get('/send-message', [TestController::class, 'sendmessage']);
+Route::get('/recibir', [TestController::class, 'recibir']);
+Route::post('/recibir', [TestController::class, 'procesar']);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
