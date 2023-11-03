@@ -25,8 +25,9 @@ Route::get('/', function () {
     ]);
 });
 Route::get('/send-message', [TestController::class, 'sendmessage']);
-Route::get('/recibir', [TestController::class, 'recibir']);
-Route::post('/recibir', [TestController::class, 'procesar']);
+Route::get('/recibir', [TestController::class, 'verifyWebhook']);
+Route::post('/recibir', [TestController::class, 'processWebhook']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
