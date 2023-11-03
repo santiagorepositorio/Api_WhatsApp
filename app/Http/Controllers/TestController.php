@@ -71,6 +71,7 @@ class TestController extends Controller
   public function processWebhook(Request $request){
     try {
       $bodyContent = json_decode($request->getContent(), true);
+      //para que no devuelva error por audios
       $body = '';
       $value = $bodyContent['entry'][0]['changes'][0]['value'];
 
