@@ -13,8 +13,8 @@ class TestController extends Controller
   {    
     try {
 
-      $token = 'EAAOwSKd5dJQBO1jXOgvGtwO1jq0q6cTjAri17wRM5HR7CWgP9ZCwVZAOs2yZBf49jpOHKFU5NwkdkDiohW8PKlCJgHvjWn362sPRS2Gvf0uzBpZAycff6s78slKEZCVsUdxPhwAsHftFMaQeSwbn44dyGv0u4UNPAPFcJZA7ZAS2YuM8ojaTto1WLGRYzWXKvNZCDQ8IPsVXgR5jJqDRNymE3vayT37W0cQWol95n9cZD';
-      $phoneId = '122463694292300';
+      $token = env('WHATSAPP_API_TOKEN');
+      $phoneId = env('WHATSAPPI_API_PHONE_ID');
       $version = 'v17.0';
       $payload = [
         "messaging_product" => "whatsapp",
